@@ -1,0 +1,32 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  registry.npmjs.org search, pypi.org/pypi/<name>/json, rubygems.org search API,
+  github.com/renewfinancial, and renewfinancial.com developer/contractor pages
+package_count: 0
+official_package_count: 0
+packages: []
+note: >-
+  No first-party client library was found in any public registry. Searched npm
+  (renewfinancial, renew-financial, californiafirst, renewpace — zero matching
+  publishers), PyPI (all four names HTTP 404), and RubyGems (empty result set).
+  The company's GitHub organization github.com/renewfinancial exists and is verified
+  by its own profile (name "Renew Financial", blog https://renewfinancial.com/) but
+  reports public_repos: 0, so there is no source distribution either. Renew Financial
+  publishes no public API, so there is nothing for an SDK to wrap. No `SDKs` pointer
+  is wired — this is a measured zero, not an unchecked field.
+registries_checked:
+- registry: npm
+  endpoint: https://registry.npmjs.org/-/v1/search
+  result: no first-party package
+- registry: pypi
+  endpoint: https://pypi.org/pypi/renewfinancial/json
+  status: 404
+  result: absent
+- registry: rubygems
+  endpoint: https://rubygems.org/api/v1/search.json?query=renewfinancial
+  result: empty
+- registry: github
+  endpoint: https://api.github.com/orgs/renewfinancial/repos
+  status: 200
+  result: 0 public repositories

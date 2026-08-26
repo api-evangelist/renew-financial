@@ -1,7 +1,18 @@
 aid: renew-financial
 name: Renew Financial
-description: 'Renew Financial is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Renew Financial (Renew Financial Group LLC) is a specialty consumer
+  finance company founded in 2008 and headquartered in Oakland, California that
+  pioneered and administers Property Assessed Clean Energy (PACE) financing for
+  residential energy efficiency, renewable energy, water efficiency and resiliency
+  home improvements. It administers the CaliforniaFIRST program in California and
+  RenewPACE in Florida, funding solar, HVAC, roofing, windows, landscaping,
+  hurricane and seismic projects through a voluntary property tax assessment repaid
+  over terms up to 30 years. The company is licensed by the California Department of
+  Financial Protection and Innovation as a PACE Program Administrator (#60DBO-90653)
+  and carries NMLS ID 1788120. Renew Financial runs a contractor technology platform
+  and an online homeowner application, but publishes no public developer program,
+  API documentation, SDK or machine-readable API contract.'
+image: https://renewfinancial.com/wp-content/uploads/2023/07/home-image-share.png
 url: https://raw.githubusercontent.com/api-evangelist/renew-financial/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +23,15 @@ created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Financial Services
+- Lending
+- Consumer Finance
+- PACE Financing
+- Home Improvement
+- Clean Energy
+- Energy Efficiency
+- Solar
+- Real Estate
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +39,71 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/renew-financial-domain-security.yml
 - type: Website
+  url: https://renewfinancial.com/
+- type: About
+  url: https://renewfinancial.com/about
+- type: Blog
+  url: https://renewfinancial.com/resources/blog
+- type: Support
+  url: https://renewfinancial.com/service-and-support-pace-financing-customers
+- type: HelpCenter
+  url: https://renewfinancial.com/resources/pace-faqs
+- type: SignUp
+  url: https://applycontractors.renewfinancial.com
+- type: Login
+  url: https://contractors.renewfinancial.com/login
+- type: TermsOfService
+  url: https://renewfinancial.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://renewfinancial.com/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/renewfinancial
+- type: LinkedIn
+  url: https://www.linkedin.com/company/renewable-funding-llc
+- type: Twitter
+  url: https://twitter.com/renewfinancial
+- type: Careers
+  url: https://renewfinancial.com/careers
+- type: Licensing
+  url: https://renewfinancial.com/lending-licenses
+- type: Investors
+  url: https://renewfinancial.com/about/investors
+- type: SecondaryMarket
   url: https://forgeglobal.com/renew-financial_stock/
+- type: LLMsTxt
+  url: llms/renew-financial-llms.txt
+- type: Packages
+  url: packages/renew-financial-packages.yml
+- type: Plans
+  url: plans/renew-financial-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/renew-financial-rate-limits.yml
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: partner-login
+  detail: >-
+    api.renewfinancial.com is a live AWS API Gateway custom domain backing Renew
+    Financial's contractor platform, but it answers every anonymous path with HTTP 403
+    {"message":"Forbidden"}, and the only door to it is the login form at
+    contractors.renewfinancial.com — an SPA that returns a 200 HTML shell for every URL
+    and exposes no spec, no docs and no developer sign-up.
+  evidence:
+  - url: https://api.renewfinancial.com/openapi.json
+    status: 403
+  - url: https://api.renewfinancial.com/
+    status: 403
+  - url: https://contractors.renewfinancial.com/login
+    status: 200
+  - url: https://renewfinancial.com/.well-known/api-catalog
+    status: 404
+  - url: https://renewfinancial.com/llms.txt
+    status: 404
+  checked: '2026-08-26'

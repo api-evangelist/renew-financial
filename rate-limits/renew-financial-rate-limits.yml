@@ -1,0 +1,14 @@
+generated: '2026-08-26'
+method: searched
+source: https://renewfinancial.com/
+limit_count: 0
+limits: []
+headers: []
+note: >-
+  No published rate limits. Renew Financial ships no public API, no developer portal and
+  no API reference, so there is no documented quota, window, burst allowance or
+  rate-limit response header to record. The only API host found,
+  api.renewfinancial.com (an AWS API Gateway custom domain backing the contractor
+  portal), rejects every anonymous request with HTTP 403 {"message":"Forbidden"} and
+  returns no RateLimit-* or Retry-After headers to observe. limit_count 0 is a measured
+  absence, not an unchecked field.

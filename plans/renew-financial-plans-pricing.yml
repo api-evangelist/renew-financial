@@ -1,0 +1,16 @@
+generated: '2026-08-26'
+method: searched
+source: https://renewfinancial.com/
+plan_count: 0
+plans: []
+note: >-
+  Renew Financial publishes no API plans, developer tiers or usage pricing, because it
+  publishes no public API. Its commercial surface is consumer PACE financing: a
+  homeowner applies at https://renewfinancial.com/application/address-needed/ and the
+  amount financed is repaid as a voluntary assessment on the property tax bill, with
+  fixed rates and terms quoted per project (up to 30 years) rather than as published
+  tiers. Contractor access to the financing platform is granted by enrollment at
+  https://applycontractors.renewfinancial.com, not by a self-serve priced plan.
+  Rate and fee disclosures are made per application under the company's California DFPI
+  PACE Program Administrator license (#60DBO-90653); no rate card is published on the
+  public site. plan_count 0 is a measured absence.

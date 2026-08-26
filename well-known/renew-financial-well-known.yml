@@ -1,0 +1,97 @@
+generated: '2026-08-26'
+method: probed
+source: live GET probes of every Renew Financial host reachable without credentials
+note: >-
+  Every /.well-known/ path probed on every Renew Financial host returned 404, 403 or
+  an SPA/HTML shell. No document was served, so NO WellKnown or SecurityTxt pointer is
+  wired into apis.yml — this file records a measured absence, not a presence.
+  contractors.renewfinancial.com is a single-page app whose catch-all returns HTTP 200
+  with the same HTML shell for every path, including paths that cannot exist; those rows
+  are recorded as 200 but treated as misses (`document: false`).
+  api.renewfinancial.com is a live AWS API Gateway custom domain
+  (d-9fal4sy3xf.execute-api.us-east-1.amazonaws.com) that answers every anonymous
+  request with {"message":"Forbidden"}.
+hosts:
+- host: renewfinancial.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    document: false
+  - path: /.well-known/openid-configuration
+    status: 404
+    document: false
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    document: false
+  - path: /.well-known/api-catalog
+    status: 404
+    document: false
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    document: false
+  - path: /.well-known/agent-card.json
+    status: 404
+    document: false
+  - path: /.well-known/agent.json
+    status: 404
+    document: false
+  - path: /llms.txt
+    status: 404
+    document: false
+- host: api.renewfinancial.com
+  note: AWS API Gateway custom domain; all anonymous requests rejected with Forbidden.
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+    document: false
+  - path: /.well-known/oauth-protected-resource
+    status: 403
+    document: false
+  - path: /.well-known/agent-card.json
+    status: 403
+    document: false
+  - path: /.well-known/agent.json
+    status: 403
+    document: false
+- host: contractors.renewfinancial.com
+  note: >-
+    SPA catch-all — returns HTTP 200 with an identical HTML shell for every path.
+    A 200 here is not evidence of a served document.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    document: false
+    body: html-spa-shell
+  - path: /.well-known/agent-card.json
+    status: 200
+    document: false
+    body: html-spa-shell
+- host: applycontractors.renewfinancial.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    document: false
+  - path: /.well-known/api-catalog
+    status: 404
+    document: false
+  - path: /.well-known/agent-card.json
+    status: 404
+    document: false
+  - path: /.well-known/openid-configuration
+    status: 404
+    document: false
+- host: renewmyhome.info
+  note: RenewPACE consumer marketing site operated by Renew Financial.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    document: false
+  - path: /.well-known/api-catalog
+    status: 404
+    document: false
+  - path: /.well-known/agent-card.json
+    status: 404
+    document: false
+  - path: /.well-known/openid-configuration
+    status: 404
+    document: false
