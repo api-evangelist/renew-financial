@@ -12,6 +12,17 @@ description: 'Renew Financial (Renew Financial Group LLC) is a specialty consume
   and carries NMLS ID 1788120. Renew Financial runs a contractor technology platform
   and an online homeowner application, but publishes no public developer program,
   API documentation, SDK or machine-readable API contract.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://renewfinancial.com/wp-content/uploads/2023/07/home-image-share.png
 url: https://raw.githubusercontent.com/api-evangelist/renew-financial/refs/heads/main/apis.yml
 x-type: company
