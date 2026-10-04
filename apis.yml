@@ -47,7 +47,7 @@ created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Lending
 - Consumer Finance
 - PACE Financing
@@ -55,7 +55,7 @@ tags:
 - Clean Energy
 - Energy Efficiency
 - Solar
-- Real-Estate
+- Real Estate
 tags_raw:
 - Company
 - Financial Services
@@ -67,6 +67,8 @@ tags_raw:
 - Energy Efficiency
 - Solar
 - Real Estate
+- Financial-Services
+- Real-Estate
 apis: []
 maintainers:
 - FN: Kin Lane
